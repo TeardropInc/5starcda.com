@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 
 gem "rails", "~> 4.0.0"
-gem 'sqlite3'
 gem "high_voltage", "~> 1.2.3"
 gem "thin"
 
@@ -19,4 +18,9 @@ group :development do
   gem "pry-rails", "~> 0.3.1"
   gem "letter_opener", "~> 1.1.2"
   gem "quiet_assets", "~> 1.0.2"
+  gem "sqlite3", "~> 1.3.7"
+end
+
+group :production do
+  gem "pg", "~> 0.15.1"
 end

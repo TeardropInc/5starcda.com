@@ -2,6 +2,9 @@ $ ->
   $fallbackMailto = $(".fallback .mailto")
   $quoteForm = $("#new_quote")
 
+  # Spam bot protection
+  $quoteForm.attr("action", $quoteForm.attr("data-action"))
+
   renderFallbackEmail = ->
     message = $quoteForm.find("#quote_comment").val()
     phone = $quoteForm.find("#quote_phone").val()
