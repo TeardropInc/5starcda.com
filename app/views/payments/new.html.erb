@@ -1,0 +1,22 @@
+<section class="row" id="payment">
+  <div class="small-12 large-5 columns">
+
+    <h1>Make A Payment</h1>
+
+
+    <%= render 'form' %>
+
+    <p>&nbsp;</p>
+    <p><%= image_tag "stripe@2x.png", size: "119x26" %></p>
+  </div>
+  <div class="small-12 large-4 columns">
+    <div class="panel">
+      <p>You can pay your invoices safely online. Your payment details are sent directly to our payment processor, <a href="https://stripe.com">Stripe</a>, and we <em>never</em> see or retain the numbers.</p>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+  Stripe.setPublishableKey('<%= ENV["STRIPE_PUBLIC_KEY"] %>');
+</script>

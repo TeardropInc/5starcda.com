@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  invoice_id: 1
+  stripe_token: MyString
+  email: MyString
+  phone: MyString
+  amount: 9.99
+
+two:
+  invoice_id: 1
+  stripe_token: MyString
+  email: MyString
+  phone: MyString
+  amount: 9.99

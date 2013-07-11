@@ -1,0 +1,11 @@
+#payment {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .payment-errors {
+    color: red;
+  }
+  select {
+    width: 40%;
+    display: inline-block;
+  }
+}

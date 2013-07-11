@@ -1,0 +1,72 @@
+<%= form_for(@payment) do |f| %>
+  <% if @payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+      <ul>
+      <% @payment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <span class="payment-errors"></span>
+  <%= f.hidden_field :stripe_token %>
+
+
+  <fieldset>
+    <legend>Invoice</legend>
+  <div class="field">
+    <%= f.label :invoice_id, "Invoice Number" %><br>
+    <%= f.number_field :invoice_id %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, placeholder: "john@doe.com" %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone, placeholder: "208 123 4567" %>
+  </div>
+  <div class="row collapse">
+    <%= f.label :amount %>
+    <div class="small-2 large-1 columns">
+      <span class="prefix">$</span>
+    </div>
+    <div class="small-10 large-11 columns">
+      <%= f.text_field :amount, placeholder: "100.00" %>
+    </div>
+  </div>
+</fieldset>
+
+  <fieldset>
+    <legend>Payment</legend>
+
+    <div class="form-row">
+      <label>
+        <span>Card Number</span>
+        <input type="text" size="20" data-stripe="number"/>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label>
+        <span>CVC</span>
+        <input type="text" size="4" data-stripe="cvc"/>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label>Expiration</label>
+      <%= select_month nil, {add_month_numbers: true}, {name: nil, class: "card_month", role: "card_expiry_month", "data-stripe" => "exp-month"} %>
+      <span> / </span>
+      <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, class: "card_year", role: "card_expiry_year", "data-stripe" => "exp-year"} %>
+
+    </div>
+  </fieldset>
+
+
+  <div class="actions">
+    <%= f.submit nil, class: "button" %>
+  </div>
+<% end %>

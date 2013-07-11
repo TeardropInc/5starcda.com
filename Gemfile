@@ -1,0 +1,22 @@
+source 'https://rubygems.org'
+ruby "2.0.0"
+
+gem "rails", "~> 4.0.0"
+gem 'sqlite3'
+gem "high_voltage", "~> 1.2.3"
+gem "thin"
+
+group :assets do
+  gem "sass-rails", "~> 4.0.0"
+  gem "coffee-rails", "~> 4.0.0"
+  gem "uglifier", "~> 2.1.1"
+  gem "jquery-rails", "~> 3.0.2"
+  gem "zurb-foundation", "~> 4.2.3"
+end
+
+group :development do
+  gem "better_errors", "~> 0.9.0"
+  gem "pry-rails", "~> 0.3.1"
+  gem "letter_opener", "~> 1.1.2"
+  gem "quiet_assets", "~> 1.0.2"
+end

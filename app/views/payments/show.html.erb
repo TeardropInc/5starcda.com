@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @payment.invoice_id %>
+</p>
+
+<p>
+  <strong>Stripe token:</strong>
+  <%= @payment.stripe_token %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @payment.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @payment.phone %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @payment.amount %>
+</p>
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

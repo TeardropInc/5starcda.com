@@ -1,0 +1,23 @@
+.flat-button {
+  padding: 20px 100px;
+  color: white;
+  text-transform: uppercase;
+  &:hover {
+    color: white;
+  }
+  &.green {
+    background: #1b7e5a;
+  }
+  &.orange {
+    background: #e56c69;
+  }
+}
+
+blockquote {
+  color: inherit;
+  border-left: none;
+}
+
+.il-block {
+  display: inline-block;
+}

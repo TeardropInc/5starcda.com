@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title><%= content_for?(:title) ? yield(:title) : "Five Star Services - Sandpoint & Coeur d'Alene, Idaho" %></title>
+
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header id="site-header">
+      <div class="row">
+        <nav class="top-bar">
+          <ul class="title-area">
+            <li class="name">
+              <h1><a href="#">5 Star Services</a></h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          </ul>
+
+          <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Make a Payment", new_payment_path %></li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <footer id="site-footer">
+      <div class="row">
+        <div class="small-12 large-4 columns">
+          <h4>Family Owned & Operated</h4>
+          <%= image_tag "portrait.jpg" %>
+        </div>
+
+        <div class="small-12 large-5 columns">
+          <a href="#" data-reveal-id="quoteModal" class="flat-button orange il-block">Request a quote</a>
+          <p class="company-description">Five Star Services provides standard cleaning services for regularly scheduled weekly, bi-weekly or monthly house cleaning or one time special services. </p>
+        </div>
+
+        <div class="small-12 large-3 columns contact-details">
+          <h3><a href="tel://12085579664">(208) 557 9664</a></h3>
+          <h3><a href="mailto:hi@5starcda.com">hi@5starcda.com</a></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns footnote">
+          Sandpoint & Coeur d’Alene Served • Bonded & Insured
+        </div>
+      </div>
+    </footer>
+
+    <div id="quoteModal" class="reveal-modal">
+      <h2>Request A Quote</h2>
+      <p class="lead">Fill out this form or call <a href="tel://12085579664">(208) 557-9664</a></p>
+      <div data-alert class="alert-box alert fallback">
+        We had technical issues sending your quote, please email <a href="" class="mailto" data-email="<%= ENV["CONTACT_EMAIL"] %>"><%= ENV["CONTACT_EMAIL"] %></a> or <a href="tel://12085579664">call</a> instead.
+      </div>
+      <div data-alert class="alert-box success">
+        Thank you for contacting us, we will be in touch shortly!
+      </div>
+      <form id="new_quote" action="/quotes" method="post">
+        <p>
+          <label>Name</label>
+          <input type="text" name="name" placeholder="John Doe">
+        </p>
+        <p>
+          <label>Email</label>
+          <input type="email" name="email" placeholder="john@doe.com">
+        </p>
+        <p>
+          <label>Phone</label>
+          <input type="text" name="phone" id="quote_phone" placeholder="(208) 123 4567">
+        </p>
+        <p>
+          <label>Tell Us About Your Cleaning Needs</label>
+          <textarea name="comment" id="quote_comment"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Send" class="button">
+        </p>
+      </form>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
