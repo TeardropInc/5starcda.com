@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130711040531) do
+ActiveRecord::Schema.define(version: 20130711234523) do
 
   create_table "payments", force: true do |t|
     t.integer  "invoice_id"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20130711040531) do
     t.decimal  "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "status_cd"
+    t.integer  "last_four_digits"
   end
 
 end

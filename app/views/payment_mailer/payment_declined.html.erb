@@ -1,0 +1,11 @@
+<h3>Your payment was declined</h3>
+
+<p>Your card failed to be charged <b><%= number_to_currency(@amount, unit: "$") %></b> for your invoice.</p>
+
+<p>You may try another card or call us at <%= ENV["CONTACT_PHONE"] %>. We have also been notifed and will try to contact you soon.</p>
+
+<p>Thank you for your business,<br>
+5 Star Services<br>
+<%= ENV["CONTACT_PHONE"] %><br>
+<%= ENV["CONTACT_EMAIL"] %>
+</p>

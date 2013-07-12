@@ -5,6 +5,8 @@ gem "rails", "~> 4.0.0"
 gem "high_voltage", "~> 1.2.3"
 gem "thin"
 gem "turbolinks", "~> 1.3.0"
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem "simple_enum", "~> 1.6.5"
 
 group :assets do
   gem "sass-rails", "~> 4.0.0"
@@ -20,6 +22,7 @@ group :development do
   gem "letter_opener", "~> 1.1.2"
   gem "quiet_assets", "~> 1.0.2"
   gem "sqlite3", "~> 1.3.7"
+  gem "binding_of_caller", "~> 0.7.2"
 end
 
 group :production do

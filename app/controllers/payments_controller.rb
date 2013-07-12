@@ -1,8 +1,5 @@
 class PaymentsController < ApplicationController
-  before_action :set_payment, only: [:show, :edit, :update, :destroy]
-
-  def show
-  end
+  #before_action :set_payment, only: [:show, :edit, :update, :destroy]
 
   def new
     @payment = Payment.new
@@ -11,10 +8,10 @@ class PaymentsController < ApplicationController
   def create
     @payment = Payment.new(payment_params)
 
-    if @payment.save
-      redirect_to new_payment_path, notice: 'Payment was successfully created.'
+    if @payment.valid? and @payment.charge_and_save
+      redirect_to new_payment_path, notice: 'Your payment was successfully charged and you will receive an email receipt. Thank you.'
     else
-      render action: 'new'
+      render action: :new, alert: "There was an error processing your card."
     end
   end
 

@@ -1,0 +1,9 @@
+<h3>Thank you for your payment!</h3>
+
+<p>Your card (*<b><%= @last4 %></b>) has been charged in the amount of <b><%= number_to_currency(@amount, unit: "$") %></b>.</p>
+
+<p>Thank you for your business,<br>
+5 Star Services<br>
+<%= ENV["CONTACT_PHONE"] %><br>
+<%= ENV["CONTACT_EMAIL"] %>
+</p>

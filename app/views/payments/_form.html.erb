@@ -1,7 +1,7 @@
 <%= form_for(@payment) do |f| %>
   <% if @payment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+      <h4><%= pluralize(@payment.errors.count, "error") %> prohibited this payment from being saved:</h4>
 
       <ul>
       <% @payment.errors.full_messages.each do |msg| %>
@@ -18,7 +18,7 @@
     <legend>Invoice</legend>
   <div class="field">
     <%= f.label :invoice_id, "Invoice Number" %><br>
-    <%= f.number_field :invoice_id %>
+    <%= f.number_field :invoice_id, placeholder: "optional", title: "If you were given an invoice number", data: {tooltip: true } %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
@@ -51,8 +51,8 @@
 
     <div class="form-row">
       <label>
-        <span>CVC</span>
-        <input type="text" size="4" data-stripe="cvc"/>
+        <span>Security Code (CVC)</span>
+        <input type="text" size="4" data-stripe="cvc" title="3-4 digit number on back" data-tooltip="true">
       </label>
     </div>
 
