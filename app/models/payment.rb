@@ -18,7 +18,7 @@ class Payment < ActiveRecord::Base
         :description => "#{phone} - #{email}"
       )
       self.update_attributes(status: :charged, last_four_digits: charge.card.last4)
-      PaymentMailer.payment_succeeded(email, amount, charge.card.last4).deliver
+      PaymentMailer.payment_succeeded(email, amount, charge.card.last4, invoice_id).deliver
       save!
     end
   rescue Stripe::CardError => e
