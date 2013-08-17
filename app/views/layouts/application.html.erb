@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
@@ -12,7 +11,7 @@
 
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Five Star Services is an all-in-one cleaning company specializing in janitorial, post-construction cleaning, commercial window cleaning and residential window cleaning in Sandpoint &amp; Coeur d'Alene, Idaho">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Five Star Services is an all-in-one cleaning company specializing in janitorial, post-construction cleaning, commercial window cleaning and residential window cleaning in Sandpoint &amp; Coeur d'Alene, Idaho" %>">
 
   	<title><%= content_for?(:title) ? yield(:title) : "Janitorial, Post-construction Cleaning, Window Cleaning in Sandpoint, Coeur d'Alene, North Idaho | 5 Star Services" %></title>
 
