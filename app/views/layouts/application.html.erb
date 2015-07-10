@@ -11,7 +11,7 @@
 
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Five Star Services is an all-in-one cleaning company specializing in janitorial, post-construction cleaning, commercial window cleaning and residential window cleaning in Sandpoint &amp; Coeur d'Alene, Idaho" %>">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Five Star Services is an cleaning company specializing in janitorial, post-construction cleaning, commercial window cleaning and residential window cleaning in Sandpoint &amp; Coeur d'Alene, Idaho" %>">
 
   	<title><%= content_for?(:title) ? yield(:title) : "Janitorial, Post-construction Cleaning, Window Cleaning in Sandpoint, Coeur d'Alene, North Idaho | 5 Star Services" %></title>
 
@@ -56,6 +56,7 @@
         <div class="small-12 large-5 columns company-description">
           <a href="#" data-reveal-id="quoteModal" class="flat-button orange il-block">Request a quote</a>
           <p>Five Star Services provides standard cleaning services for regularly scheduled weekly, bi-weekly or monthly house cleaning or one time special services. </p>
+          <p><%= link_to 'Privacy Policy', page_path('privacy') %></p>
         </div>
 
         <div class="small-12 large-3 columns contact-details">
@@ -104,18 +105,5 @@
     </div>
 
     <%= javascript_include_tag "application" %>
-    <script type="text/javascript">
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '527e7d47613f5d7c8b000089');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
   </body>
 </html>
