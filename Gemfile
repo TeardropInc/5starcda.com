@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.6.5"
 
-gem "rails", "~> 4.0.0"
+gem 'rails', '~> 4.2', '>= 4.2.11.1'
 gem "high_voltage", "~> 1.2.3"
 gem "thin", '~> 1.7', '>= 1.7.2'
 gem "turbolinks", "~> 1.3.0"
