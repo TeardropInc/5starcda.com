@@ -5,14 +5,14 @@ gem 'rails', '~> 4.2', '>= 4.2.11.1'
 gem "high_voltage", "~> 1.2.3"
 gem "thin", '~> 1.7', '>= 1.7.2'
 gem "turbolinks", "~> 1.3.0"
-gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'stripe', '~> 1.58'
 gem "simple_enum", "~> 1.6.5"
 
 group :assets do
   gem "sass-rails", "~> 4.0.5"
   gem "coffee-rails", "~> 4.0.0"
   gem "uglifier", "~> 2.1.1"
-  gem "jquery-rails", "~> 3.0.2"
+  gem "jquery-rails", "~> 3.1.3"
   gem "zurb-foundation", "~> 4.3.2"
 end
 
