@@ -13,7 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20130711234523) do
 
-  create_table "payments", force: true do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "payments", force: :cascade do |t|
     t.integer  "invoice_id"
     t.string   "stripe_token"
     t.string   "email"

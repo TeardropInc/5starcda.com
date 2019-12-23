@@ -7,6 +7,7 @@ gem "thin", '~> 1.7', '>= 1.7.2'
 gem "turbolinks", "~> 1.3.0"
 gem 'stripe', '~> 1.58'
 gem "simple_enum", "~> 1.6.5"
+gem 'pg', '~> 0.21.0'
 
 group :assets do
   gem "sass-rails", "~> 4.0.5"
@@ -21,11 +22,9 @@ group :development do
   gem "pry-rails", "~> 0.3.1"
   gem "letter_opener", "~> 1.1.2"
   gem "quiet_assets", "~> 1.0.2"
-  gem 'sqlite3', '~> 1.4', '>= 1.4.2'
   gem "binding_of_caller", "~> 0.7.2"
 end
 
 group :production do
-  gem 'pg', '~> 1.1', '>= 1.1.4'
   gem 'rails_12factor'
 end
