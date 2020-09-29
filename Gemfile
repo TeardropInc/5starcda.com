@@ -12,7 +12,7 @@ group :assets do
   gem "sass-rails", "~> 4.0.5"
   gem "coffee-rails", "~> 4.0.0"
   gem "uglifier", "~> 2.1.1"
-  gem "jquery-rails", "~> 4.3.5"
+  gem "jquery-rails", "~> 4.4.0"
   gem "zurb-foundation", "~> 4.3.2"
 end
 
