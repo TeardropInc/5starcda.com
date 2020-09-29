@@ -1,8 +1,5 @@
-# Load the rails application
-require File.expand_path('../application', __FILE__)
-
-# Initialize the rails application
-FiveStarServices::Application.initialize!
+# Load the Rails application.
+require_relative 'application'
 
 ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.sendgrid.net',
@@ -13,3 +10,7 @@ ActionMailer::Base.smtp_settings = {
   :domain         => 'heroku.com',
   :enable_starttls_auto => true
 }
+
+
+# Initialize the Rails application.
+Rails.application.initialize!
