@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.2', '>= 4.2.11.1'
+gem 'rails', '~> 4.2.11.3'
 gem "high_voltage", "~> 1.2.3"
 gem "thin", '~> 1.7', '>= 1.7.2'
 gem "turbolinks", "~> 1.3.0"
@@ -9,8 +9,8 @@ gem "simple_enum", "~> 1.6.5"
 gem 'pg', '~> 0.21.0'
 
 group :assets do
-  gem "sass-rails", "~> 4.0.5"
-  gem "coffee-rails", "~> 4.0.0"
+  gem "sass-rails", "~> 5.0"
+  gem "coffee-rails", "~> 4.2.2"
   gem "uglifier", "~> 2.1.1"
   gem "jquery-rails", "~> 4.4.0"
   gem "zurb-foundation", "~> 4.3.2"
