@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.6.6"
+
 gem 'rails', '~> 4.2.11.3'
 gem "high_voltage", "~> 1.2.3"
 gem "thin", '~> 1.7', '>= 1.7.2'
