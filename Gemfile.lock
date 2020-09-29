@@ -204,8 +204,5 @@ DEPENDENCIES
   uglifier (~> 2.1.1)
   zurb-foundation (~> 4.3.2)
 
-RUBY VERSION
-   ruby 2.6.5p114
-
 BUNDLED WITH
    1.17.2
