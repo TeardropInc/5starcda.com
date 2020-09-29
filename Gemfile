@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby "2.6.5"
 
 gem 'rails', '~> 4.2', '>= 4.2.11.1'
 gem "high_voltage", "~> 1.2.3"
@@ -28,3 +27,4 @@ end
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
 end
+
