@@ -9,6 +9,7 @@ gem "turbolinks", "~> 1.3.0"
 gem 'stripe', '~> 1.58'
 gem "simple_enum", "~> 1.6.5"
 gem 'pg', '~> 0.21.0'
+gem 'bigdecimal', '3.0.0'
 
 group :assets do
   gem "sass-rails", "~> 5.0"
