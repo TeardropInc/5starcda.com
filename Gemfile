@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby "2.6.6"
+ruby "2.7.2"
 
 gem 'rails', '~> 4.2.11.3'
 gem "high_voltage", "~> 1.2.3"
-gem "thin", '~> 1.7', '>= 1.7.2'
+gem 'puma', '~> 5.1', '>= 5.1.1'
 gem "turbolinks", "~> 1.3.0"
 gem 'stripe', '~> 1.58'
 gem "simple_enum", "~> 1.6.5"
