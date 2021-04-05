@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.7.2"
+ruby "2.6.6"
 
 gem 'rails', '~> 4.2.11.3'
 gem "high_voltage", "~> 1.2.3"
@@ -9,7 +9,7 @@ gem "turbolinks", "~> 1.3.0"
 gem 'stripe', '~> 1.58'
 gem "simple_enum", "~> 1.6.5"
 gem 'pg', '~> 0.21.0'
-gem 'bigdecimal', '3.0.0'
+gem 'bigdecimal', '1.4.4'
 
 group :assets do
   gem "sass-rails", "~> 5.0"
