@@ -4,7 +4,7 @@ ruby "2.6.6"
 
 gem 'rails', '~> 4.2.11.3'
 gem "high_voltage", "~> 1.2.3"
-gem 'puma', '~> 5.1', '>= 5.1.1'
+gem 'puma', '~> 5.3'
 gem "turbolinks", "~> 1.3.0"
 gem 'stripe', '~> 1.58'
 gem "simple_enum", "~> 1.6.5"
